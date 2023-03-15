@@ -1,0 +1,503 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Wed Mar 15 21:28:22 2023
+| Host         : DESKTOP-Q2AP9EN running 64-bit major release  (build 9200)
+| Command      : report_timing -sort_by group -max_paths 100 -path_type summary -file ./Tutorial_Created_Data/bft_output/post_route_timing.rpt
+| Design       : bft
+| Device       : 7k70t-fbg484
+| Speed File   : -2  PRODUCTION 1.12 2017-02-17
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Startpoint                     Endpoint                       Slack(ns)     
+----------------------------------------------------------------------------
+ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[5].ct/xOutReg_reg/C[16]
+                                                              1.472         
+ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[5].ct/xOutStepReg_reg/C[16]
+                                                              1.474         
+ingressFifoWrEn_reg/C          ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/ENBWREN
+                                                              1.580         
+ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[5].ct/xOutReg_reg/C[17]
+                                                              1.590         
+ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[5].ct/xOutReg_reg/C[46]
+                                                              1.590         
+ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[5].ct/xOutStepReg_reg/C[17]
+                                                              1.592         
+ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[5].ct/xOutStepReg_reg/C[46]
+                                                              1.592         
+ingressFifoWrEn_reg/C          ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/ENBWREN
+                                                              1.596         
+ingressLoop[1].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[1].ct/xOutReg_reg/A[20]
+                                                              1.645         
+ingressLoop[1].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[1].ct/xOutReg_reg/A[21]
+                                                              1.645         
+ingressLoop[1].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[1].ct/xOutReg_reg/A[22]
+                                                              1.645         
+ingressLoop[1].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[1].ct/xOutReg_reg/A[23]
+                                                              1.645         
+ingressLoop[7].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[7].ct/xOutReg_reg/C[23]
+                                                              1.658         
+ingressLoop[7].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[7].ct/xOutReg_reg/C[41]
+                                                              1.658         
+ingressLoop[7].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[7].ct/xOutStepReg_reg/C[23]
+                                                              1.658         
+ingressLoop[7].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[7].ct/xOutStepReg_reg/C[41]
+                                                              1.658         
+ingressLoop[7].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[7].ct/xOutReg_reg/C[40]
+                                                              1.674         
+ingressLoop[7].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[7].ct/xOutStepReg_reg/C[40]
+                                                              1.674         
+ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[2].ct/xOutStepReg_reg/A[22]
+                                                              1.722         
+ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[2].ct/xOutStepReg_reg/A[23]
+                                                              1.722         
+ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[5].ct/xOutReg_reg/C[38]
+                                                              1.733         
+ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[5].ct/xOutReg_reg/C[39]
+                                                              1.733         
+ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[5].ct/xOutReg_reg/C[44]
+                                                              1.733         
+ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[5].ct/xOutStepReg_reg/C[38]
+                                                              1.735         
+ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[5].ct/xOutStepReg_reg/C[39]
+                                                              1.735         
+ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[5].ct/xOutStepReg_reg/C[44]
+                                                              1.735         
+ingressLoop[1].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[1].ct/xOutReg_reg/A[24]
+                                                              1.742         
+ingressLoop[1].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[1].ct/xOutReg_reg/A[25]
+                                                              1.742         
+ingressLoop[1].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[1].ct/xOutReg_reg/A[26]
+                                                              1.742         
+ingressLoop[1].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[1].ct/xOutReg_reg/A[27]
+                                                              1.742         
+ingressLoop[1].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[1].ct/xOutReg_reg/A[15]
+                                                              1.757         
+arnd3/transformLoop[1].ct0/xOutStepReg_reg/CLK
+                               arnd4/transformLoop[5].ct/xOutReg_reg/C[23]
+                                                              1.766         
+arnd3/transformLoop[1].ct0/xOutStepReg_reg/CLK
+                               arnd4/transformLoop[5].ct/xOutReg_reg/C[41]
+                                                              1.766         
+arnd3/transformLoop[1].ct0/xOutStepReg_reg/CLK
+                               arnd4/transformLoop[5].ct/xOutReg_reg/C[43]
+                                                              1.766         
+ingressFifoWrEn_reg/C          ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.next_rd_addr_reg[0]/CE
+                                                              1.767         
+ingressFifoWrEn_reg/C          ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.next_rd_addr_reg[2]/CE
+                                                              1.767         
+ingressFifoWrEn_reg/C          ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.rd_addr_tmp_reg[0]/CE
+                                                              1.767         
+ingressFifoWrEn_reg/C          ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.two_rd_addr_reg[0]/CE
+                                                              1.767         
+arnd3/transformLoop[1].ct0/xOutStepReg_reg/CLK
+                               arnd4/transformLoop[5].ct/xOutReg_reg/C[22]
+                                                              1.768         
+arnd3/transformLoop[1].ct0/xOutStepReg_reg/CLK
+                               arnd4/transformLoop[5].ct/xOutReg_reg/C[40]
+                                                              1.768         
+ingressLoop[1].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[1].ct/xOutReg_reg/C[22]
+                                                              1.770         
+ingressFifoWrEn_reg/C          ingressLoop[6].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/ENBWREN
+                                                              1.780         
+ingressLoop[0].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[0].ct/xOutStepReg_reg/C[33]
+                                                              1.785         
+ingressLoop[0].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[0].ct/xOutStepReg_reg/C[35]
+                                                              1.785         
+ingressLoop[7].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[7].ct/xOutReg_reg/C[33]
+                                                              1.785         
+ingressLoop[7].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[7].ct/xOutReg_reg/C[35]
+                                                              1.785         
+ingressLoop[7].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[7].ct/xOutStepReg_reg/C[33]
+                                                              1.785         
+ingressLoop[7].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[7].ct/xOutStepReg_reg/C[35]
+                                                              1.785         
+ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[5].ct/xOutStepReg_reg/A[18]
+                                                              1.786         
+ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[5].ct/xOutStepReg_reg/A[19]
+                                                              1.786         
+ingressLoop[0].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[0].ct/xOutReg_reg/C[33]
+                                                              1.787         
+ingressLoop[0].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[0].ct/xOutReg_reg/C[35]
+                                                              1.787         
+ingressLoop[7].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[7].ct/xOutReg_reg/C[43]
+                                                              1.792         
+ingressLoop[7].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[7].ct/xOutStepReg_reg/C[43]
+                                                              1.792         
+ingressFifoWrEn_reg/C          ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.rd_addr_reg[4]/CE
+                                                              1.794         
+ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[5].ct/xOutReg_reg/C[22]
+                                                              1.812         
+ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[5].ct/xOutStepReg_reg/C[22]
+                                                              1.814         
+ingressFifoWrEn_reg/C          ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.next_rd_addr_reg[5]/CE
+                                                              1.818         
+ingressFifoWrEn_reg/C          ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.next_rd_addr_reg[6]/CE
+                                                              1.818         
+ingressFifoWrEn_reg/C          ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.next_rd_addr_reg[7]/CE
+                                                              1.818         
+ingressFifoWrEn_reg/C          ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.next_rd_addr_reg[9]/CE
+                                                              1.818         
+ingressFifoWrEn_reg/C          ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.rd_addr_reg[5]/CE
+                                                              1.818         
+ingressFifoWrEn_reg/C          ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.rd_addr_reg[7]/CE
+                                                              1.818         
+ingressFifoWrEn_reg/C          ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.two_rd_addr_reg[9]/CE
+                                                              1.818         
+ingressLoop[1].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[1].ct/xOutStepReg_reg/A[18]
+                                                              1.833         
+ingressLoop[1].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[1].ct/xOutStepReg_reg/A[19]
+                                                              1.833         
+ingressFifoWrEn_reg/C          ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.rd_addr_tmp_reg[6]/CE
+                                                              1.833         
+ingressFifoWrEn_reg/C          ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.rd_addr_tmp_reg[7]/CE
+                                                              1.833         
+ingressFifoWrEn_reg/C          ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.rd_addr_tmp_reg[8]/CE
+                                                              1.833         
+ingressFifoWrEn_reg/C          ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.rd_addr_tmp_reg[9]/CE
+                                                              1.833         
+ingressFifoWrEn_reg/C          ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.two_rd_addr_reg[5]/CE
+                                                              1.833         
+ingressFifoWrEn_reg/C          ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.two_rd_addr_reg[6]/CE
+                                                              1.833         
+ingressFifoWrEn_reg/C          ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.two_rd_addr_reg[7]/CE
+                                                              1.833         
+ingressFifoWrEn_reg/C          ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.two_rd_addr_reg[8]/CE
+                                                              1.833         
+ingressFifoWrEn_reg/C          ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.next_rd_addr_reg[3]/CE
+                                                              1.836         
+ingressFifoWrEn_reg/C          ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.rd_addr_reg[6]/CE
+                                                              1.836         
+ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[2].ct/xOutStepReg_reg/A[20]
+                                                              1.840         
+ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[2].ct/xOutStepReg_reg/A[21]
+                                                              1.840         
+ingressLoop[1].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[1].ct/xOutReg_reg/A[28]
+                                                              1.844         
+ingressLoop[1].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               arnd1/transformLoop[1].ct/xOutReg_reg/A[29]
+                                                              1.844         
+ingressFifoWrEn_reg/C          ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.rd_addr_reg[9]/CE
+                                                              1.844         
+arnd3/transformLoop[1].ct0/xOutStepReg_reg/CLK
+                               arnd4/transformLoop[5].ct/xOutReg_reg/C[21]
+                                                              1.850         
+arnd3/transformLoop[1].ct0/xOutStepReg_reg/CLK
+                               arnd4/transformLoop[5].ct/xOutReg_reg/C[42]
+                                                              1.850         
+ingressFifoWrEn_reg/C          ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.next_rd_addr_reg[5]/CE
+                                                              1.851         
+ingressFifoWrEn_reg/C          ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.next_rd_addr_reg[6]/CE
+                                                              1.851         
+ingressFifoWrEn_reg/C          ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.next_rd_addr_reg[7]/CE
+                                                              1.851         
+ingressFifoWrEn_reg/C          ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.next_rd_addr_reg[9]/CE
+                                                              1.851         
+ingressFifoWrEn_reg/C          ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.rd_addr_reg[8]/CE
+                                                              1.851         
+ingressFifoWrEn_reg/C          ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.rd_addr_tmp_reg[0]/CE
+                                                              1.851         
+ingressFifoWrEn_reg/C          ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.two_rd_addr_reg[0]/CE
+                                                              1.851         
+ingressFifoWrEn_reg/C          ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.two_rd_addr_reg[9]/CE
+                                                              1.851         
+ingressFifoWrEn_reg/C          ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.next_rd_addr_reg[1]/CE
+                                                              1.856         
+ingressFifoWrEn_reg/C          ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.next_rd_addr_reg[8]/CE
+                                                              1.856         
+ingressFifoWrEn_reg/C          ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.rd_addr_tmp_reg[3]/CE
+                                                              1.856         
+ingressFifoWrEn_reg/C          ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.rd_addr_tmp_reg[4]/CE
+                                                              1.856         
+ingressFifoWrEn_reg/C          ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.rd_addr_tmp_reg[5]/CE
+                                                              1.856         
+ingressFifoWrEn_reg/C          ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.two_rd_addr_reg[1]/CE
+                                                              1.856         
+arnd3/transformLoop[1].ct0/xOutStepReg_reg/CLK
+                               arnd4/transformLoop[5].ct/xOutReg_reg/C[20]
+                                                              1.857         
+arnd3/transformLoop[1].ct0/xOutStepReg_reg/CLK
+                               arnd4/transformLoop[5].ct/xOutReg_reg/C[27]
+                                                              1.859         
+ingressFifoWrEn_reg/C          ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.next_rd_addr_reg[4]/CE
+                                                              1.859         
+ingressLoop[1].ingressFifo/buffer_fifo/infer_fifo.rd_addr_reg[8]/C
+                               ingressLoop[1].ingressFifo/buffer_fifo/infer_fifo.full_reg_reg/D
+                                                              2.025         
+ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.rd_addr_reg[8]/C
+                               ingressLoop[3].ingressFifo/buffer_fifo/infer_fifo.full_reg_reg/D
+                                                              2.109         
+ingressLoop[0].ingressFifo/buffer_fifo/infer_fifo.rd_addr_reg[2]/C
+                               ingressLoop[0].ingressFifo/buffer_fifo/infer_fifo.full_reg_reg/D
+                                                              2.159         
+egressLoop[7].egressFifo/buffer_fifo/infer_fifo.wr_addr_reg[3]/C
+                               egressLoop[7].egressFifo/buffer_fifo/infer_fifo.empty_reg_reg/D
+                                                              2.175         
+ingressLoop[7].ingressFifo/buffer_fifo/infer_fifo.rd_addr_reg[3]/C
+                               ingressLoop[7].ingressFifo/buffer_fifo/infer_fifo.full_reg_reg/D
+                                                              2.218         
+egressLoop[5].egressFifo/buffer_fifo/infer_fifo.wr_addr_reg[0]/C
+                               egressLoop[5].egressFifo/buffer_fifo/infer_fifo.empty_reg_reg/D
+                                                              2.226         
+egressLoop[0].egressFifo/buffer_fifo/infer_fifo.wr_addr_reg[0]/C
+                               egressLoop[0].egressFifo/buffer_fifo/infer_fifo.empty_reg_reg/D
+                                                              2.241         
+ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.rd_addr_reg[5]/C
+                               ingressLoop[5].ingressFifo/buffer_fifo/infer_fifo.full_reg_reg/D
+                                                              2.293         
+egressLoop[1].egressFifo/buffer_fifo/infer_fifo.wr_addr_reg[6]/C
+                               egressLoop[1].egressFifo/buffer_fifo/infer_fifo.empty_reg_reg/D
+                                                              2.381         
+ingressLoop[4].ingressFifo/buffer_fifo/infer_fifo.rd_addr_reg[5]/C
+                               ingressLoop[4].ingressFifo/buffer_fifo/infer_fifo.full_reg_reg/D
+                                                              2.387         
+egressLoop[6].egressFifo/buffer_fifo/infer_fifo.wr_addr_reg[5]/C
+                               egressLoop[6].egressFifo/buffer_fifo/infer_fifo.empty_reg_reg/D
+                                                              2.405         
+egressLoop[4].egressFifo/buffer_fifo/infer_fifo.wr_addr_reg[0]/C
+                               egressLoop[4].egressFifo/buffer_fifo/infer_fifo.empty_reg_reg/D
+                                                              2.454         
+egressLoop[2].egressFifo/buffer_fifo/infer_fifo.wr_addr_reg[0]/C
+                               egressLoop[2].egressFifo/buffer_fifo/infer_fifo.empty_reg_reg/D
+                                                              2.464         
+ingressLoop[6].ingressFifo/buffer_fifo/infer_fifo.rd_addr_reg[1]/C
+                               ingressLoop[6].ingressFifo/buffer_fifo/infer_fifo.full_reg_reg/D
+                                                              2.474         
+ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.rd_addr_reg[7]/C
+                               ingressLoop[2].ingressFifo/buffer_fifo/infer_fifo.full_reg_reg/D
+                                                              2.490         
+egressLoop[3].egressFifo/buffer_fifo/infer_fifo.wr_addr_reg[3]/C
+                               egressLoop[3].egressFifo/buffer_fifo/infer_fifo.empty_reg_reg/D
+                                                              2.499         
+egressLoop[6].egressFifo/buffer_fifo/infer_fifo.full_reg_reg/C
+                               error_reg/D                    2.715         
+egressLoop[3].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[28]/D         6.203         
+egressLoop[1].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[31]/D         6.228         
+egressLoop[0].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[17]/D         6.250         
+egressLoop[0].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[9]/D          6.310         
+egressLoop[1].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[10]/D         6.317         
+egressLoop[2].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[30]/D         6.333         
+egressLoop[3].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[14]/D         6.338         
+egressLoop[0].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[23]/D         6.342         
+egressLoop[0].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[13]/D         6.344         
+egressLoop[3].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[1]/D          6.370         
+egressLoop[3].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[20]/D         6.381         
+egressLoop[0].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[25]/D         6.406         
+egressLoop[1].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[24]/D         6.411         
+egressLoop[5].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[8]/D          6.432         
+egressLoop[2].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[3]/D          6.464         
+egressLoop[0].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[18]/D         6.464         
+egressLoop[5].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[27]/D         6.474         
+egressLoop[5].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[0]/D          6.490         
+egressLoop[1].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[5]/D          6.497         
+egressLoop[0].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[7]/D          6.521         
+egressLoop[1].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[22]/D         6.525         
+egressLoop[0].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[26]/D         6.528         
+egressLoop[0].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[29]/D         6.529         
+egressLoop[5].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[19]/D         6.535         
+egressLoop[0].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[4]/D          6.546         
+egressLoop[1].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[11]/D         6.558         
+egressLoop[3].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[12]/D         6.561         
+egressLoop[2].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[16]/D         6.561         
+egressLoop[0].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[2]/D          6.565         
+egressLoop[3].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[21]/D         6.581         
+egressLoop[3].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[15]/D         6.631         
+egressLoop[1].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/CLKBWRCLK
+                               wbOutputData_reg[6]/D          6.639         
+fifoSelect_reg[2]/C            egressLoop[2].egressFifo/buffer_fifo/infer_fifo.next_rd_addr_reg[3]/CE
+                                                              7.147         
+fifoSelect_reg[0]/C            egressLoop[0].egressFifo/buffer_fifo/infer_fifo.rd_addr_reg[9]/CE
+                                                              7.211         
+fifoSelect_reg[2]/C            egressLoop[2].egressFifo/buffer_fifo/infer_fifo.rd_addr_tmp_reg[2]/CE
+                                                              7.257         
+fifoSelect_reg[2]/C            egressLoop[2].egressFifo/buffer_fifo/infer_fifo.rd_addr_tmp_reg[3]/CE
+                                                              7.257         
+fifoSelect_reg[2]/C            egressLoop[2].egressFifo/buffer_fifo/infer_fifo.rd_addr_tmp_reg[4]/CE
+                                                              7.257         
+fifoSelect_reg[2]/C            egressLoop[2].egressFifo/buffer_fifo/infer_fifo.two_rd_addr_reg[2]/CE
+                                                              7.257         
+fifoSelect_reg[2]/C            egressLoop[2].egressFifo/buffer_fifo/infer_fifo.two_rd_addr_reg[3]/CE
+                                                              7.257         
+fifoSelect_reg[2]/C            egressLoop[2].egressFifo/buffer_fifo/infer_fifo.two_rd_addr_reg[4]/CE
+                                                              7.257         
+fifoSelect_reg[2]/C            egressLoop[2].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/ENBWREN
+                                                              7.282         
+FSM_sequential_loadState_reg[2]/C
+                               ingressLoop[0].ingressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/ENARDEN
+                                                              7.303         
+fifoSelect_reg[5]/C            egressLoop[5].egressFifo/buffer_fifo/infer_fifo.rd_addr_reg[7]/CE
+                                                              7.326         
+fifoSelect_reg[5]/C            egressLoop[5].egressFifo/buffer_fifo/infer_fifo.rd_addr_tmp_reg[6]/CE
+                                                              7.353         
+fifoSelect_reg[5]/C            egressLoop[5].egressFifo/buffer_fifo/infer_fifo.rd_addr_tmp_reg[7]/CE
+                                                              7.353         
+fifoSelect_reg[0]/C            egressLoop[0].egressFifo/buffer_fifo/infer_fifo.next_rd_addr_reg[1]/CE
+                                                              7.366         
+fifoSelect_reg[0]/C            egressLoop[0].egressFifo/buffer_fifo/infer_fifo.next_rd_addr_reg[2]/CE
+                                                              7.366         
+fifoSelect_reg[0]/C            egressLoop[0].egressFifo/buffer_fifo/infer_fifo.next_rd_addr_reg[4]/CE
+                                                              7.366         
+fifoSelect_reg[0]/C            egressLoop[0].egressFifo/buffer_fifo/infer_fifo.rd_addr_tmp_reg[0]/CE
+                                                              7.366         
+fifoSelect_reg[0]/C            egressLoop[0].egressFifo/buffer_fifo/infer_fifo.rd_addr_tmp_reg[2]/CE
+                                                              7.366         
+fifoSelect_reg[0]/C            egressLoop[0].egressFifo/buffer_fifo/infer_fifo.rd_addr_tmp_reg[3]/CE
+                                                              7.366         
+fifoSelect_reg[0]/C            egressLoop[0].egressFifo/buffer_fifo/infer_fifo.rd_addr_tmp_reg[4]/CE
+                                                              7.366         
+fifoSelect_reg[0]/C            egressLoop[0].egressFifo/buffer_fifo/infer_fifo.rd_addr_tmp_reg[5]/CE
+                                                              7.366         
+fifoSelect_reg[0]/C            egressLoop[0].egressFifo/buffer_fifo/infer_fifo.two_rd_addr_reg[0]/CE
+                                                              7.366         
+fifoSelect_reg[0]/C            egressLoop[0].egressFifo/buffer_fifo/infer_fifo.two_rd_addr_reg[1]/CE
+                                                              7.366         
+fifoSelect_reg[0]/C            egressLoop[0].egressFifo/buffer_fifo/infer_fifo.two_rd_addr_reg[2]/CE
+                                                              7.366         
+fifoSelect_reg[0]/C            egressLoop[0].egressFifo/buffer_fifo/infer_fifo.two_rd_addr_reg[3]/CE
+                                                              7.366         
+fifoSelect_reg[0]/C            egressLoop[0].egressFifo/buffer_fifo/infer_fifo.two_rd_addr_reg[4]/CE
+                                                              7.366         
+FSM_sequential_loadState_reg[2]/C
+                               ingressLoop[6].ingressFifo/buffer_fifo/infer_fifo.wr_addr_reg[1]/CE
+                                                              7.371         
+FSM_sequential_loadState_reg[2]/C
+                               ingressLoop[6].ingressFifo/buffer_fifo/infer_fifo.wr_addr_reg[3]/CE
+                                                              7.371         
+FSM_sequential_loadState_reg[2]/C
+                               ingressLoop[6].ingressFifo/buffer_fifo/infer_fifo.wr_addr_reg[4]/CE
+                                                              7.371         
+FSM_sequential_loadState_reg[2]/C
+                               ingressLoop[6].ingressFifo/buffer_fifo/infer_fifo.wr_addr_reg[5]/CE
+                                                              7.371         
+FSM_sequential_loadState_reg[2]/C
+                               ingressLoop[6].ingressFifo/buffer_fifo/infer_fifo.wr_addr_reg[6]/CE
+                                                              7.371         
+FSM_sequential_loadState_reg[2]/C
+                               ingressLoop[6].ingressFifo/buffer_fifo/infer_fifo.wr_addr_reg[8]/CE
+                                                              7.371         
+FSM_sequential_loadState_reg[2]/C
+                               ingressLoop[6].ingressFifo/buffer_fifo/infer_fifo.wr_addr_reg[9]/CE
+                                                              7.371         
+fifoSelect_reg[5]/C            egressLoop[5].egressFifo/buffer_fifo/infer_fifo.next_rd_addr_reg[5]/CE
+                                                              7.376         
+fifoSelect_reg[5]/C            egressLoop[5].egressFifo/buffer_fifo/infer_fifo.rd_addr_reg[1]/CE
+                                                              7.376         
+fifoSelect_reg[5]/C            egressLoop[5].egressFifo/buffer_fifo/infer_fifo.rd_addr_reg[3]/CE
+                                                              7.376         
+fifoSelect_reg[5]/C            egressLoop[5].egressFifo/buffer_fifo/infer_fifo.rd_addr_reg[5]/CE
+                                                              7.376         
+fifoSelect_reg[5]/C            egressLoop[5].egressFifo/buffer_fifo/infer_fifo.rd_addr_reg[8]/CE
+                                                              7.376         
+fifoSelect_reg[5]/C            egressLoop[5].egressFifo/buffer_fifo/infer_fifo.rd_addr_reg[9]/CE
+                                                              7.376         
+fifoSelect_reg[5]/C            egressLoop[5].egressFifo/buffer_fifo/infer_fifo.two_rd_addr_reg[5]/CE
+                                                              7.376         
+fifoSelect_reg[5]/C            egressLoop[5].egressFifo/buffer_fifo/infer_fifo.two_rd_addr_reg[6]/CE
+                                                              7.376         
+fifoSelect_reg[5]/C            egressLoop[5].egressFifo/buffer_fifo/infer_fifo.next_rd_addr_reg[3]/CE
+                                                              7.387         
+fifoSelect_reg[5]/C            egressLoop[5].egressFifo/buffer_fifo/infer_fifo.rd_addr_tmp_reg[2]/CE
+                                                              7.387         
+fifoSelect_reg[5]/C            egressLoop[5].egressFifo/buffer_fifo/infer_fifo.rd_addr_tmp_reg[8]/CE
+                                                              7.387         
+fifoSelect_reg[5]/C            egressLoop[5].egressFifo/buffer_fifo/infer_fifo.rd_addr_tmp_reg[9]/CE
+                                                              7.387         
+fifoSelect_reg[5]/C            egressLoop[5].egressFifo/buffer_fifo/infer_fifo.two_rd_addr_reg[2]/CE
+                                                              7.387         
+fifoSelect_reg[5]/C            egressLoop[5].egressFifo/buffer_fifo/infer_fifo.two_rd_addr_reg[3]/CE
+                                                              7.387         
+fifoSelect_reg[5]/C            egressLoop[5].egressFifo/buffer_fifo/infer_fifo.two_rd_addr_reg[4]/CE
+                                                              7.387         
+FSM_sequential_loadState_reg[2]/C
+                               ingressLoop[6].ingressFifo/buffer_fifo/infer_fifo.next_wr_addr_reg[1]/CE
+                                                              7.407         
+FSM_sequential_loadState_reg[2]/C
+                               ingressLoop[6].ingressFifo/buffer_fifo/infer_fifo.two_wr_addr_reg[1]/CE
+                                                              7.407         
+fifoSelect_reg[5]/C            egressLoop[5].egressFifo/buffer_fifo/infer_fifo.block_ram_performance.fifo_ram_reg/ENBWREN
+                                                              7.416         
+
+
+

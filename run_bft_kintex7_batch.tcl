@@ -6,6 +6,7 @@
 #
 # STEP#0: define output directory area.
 #
+cd {E:\GitHub_lib\cloud_stuff} 
 set outputDir ./Tutorial_Created_Data/bft_output             
 file mkdir $outputDir
 #
