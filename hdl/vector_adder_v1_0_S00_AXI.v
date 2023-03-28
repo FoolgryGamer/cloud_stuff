@@ -403,6 +403,7 @@
         .clk(S_AXI_ACLK),
         .A(slv_reg0),
         .B(slv_reg1),
+		.mod(slv_reg2),
         .out(out)
         );
 	// User logic ends
