@@ -2,6 +2,7 @@ module vector
 #(parameter size=3072)
 (
     input clk,
+    input rst,
     input [size-1:0] A,
     input [size-1:0] B,
     input [1:0] mod,
@@ -15,7 +16,6 @@ parameter NUMBER_URAM = 86;
 wire [ADDRWIDTH-1:0] addra;
 wire [ADDRWIDTH-1:0] addrb;
 wire [DATAWIDTH-1:0] doutb[NUMBER_URAM-1:0];
-
 
 genvar URAM_i;
 generate for(URAM_i=0;S_i<NUMBER_URAM;URAM_i=URAM_i+1)
@@ -33,7 +33,7 @@ begin:URAM_generate
         .MEMORY_INIT_PARAM("0"),        // String
         .MEMORY_OPTIMIZATION("true"),   // String
         .MEMORY_PRIMITIVE("ultra"),     // String
-        .MEMORY_SIZE(4608),            // DECIMAL
+        .MEMORY_SIZE(4608),             // DECIMAL
         .MESSAGE_CONTROL(0),            // DECIMAL
         .READ_DATA_WIDTH_B(DATAWIDTH),  // DECIMAL
         .READ_LATENCY_B(2),             // DECIMAL
@@ -51,7 +51,7 @@ begin:URAM_generate
             .dbiterrb(),             // 1-bit output: Status signal to indicate double bit error occurrence
                                             // on the data output of port B.
 
-            .doutb(doutb),                   // READ_DATA_WIDTH_B-bit output: Data output for port B read operations.
+            .doutb(doutb[URAM_i]),                   // READ_DATA_WIDTH_B-bit output: Data output for port B read operations.
             .sbiterrb(),             // 1-bit output: Status signal to indicate single bit error occurrence
                                             // on the data output of port B.
 
@@ -126,7 +126,7 @@ begin:URAM_generate
         .dbiterrb(),             // 1-bit output: Status signal to indicate double bit error occurrence
                                         // on the data output of port B.
 
-        .doutb(doutb),                   // READ_DATA_WIDTH_B-bit output: Data output for port B read operations.
+        .doutb(doutb[URAM_i]),                   // READ_DATA_WIDTH_B-bit output: Data output for port B read operations.
         .sbiterrb(),             // 1-bit output: Status signal to indicate single bit error occurrence
                                         // on the data output of port B.
 
@@ -202,7 +202,7 @@ begin:URAM_generate
         .dbiterrb(),             // 1-bit output: Status signal to indicate double bit error occurrence
                                         // on the data output of port B.
 
-        .doutb(doutb),                   // READ_DATA_WIDTH_B-bit output: Data output for port B read operations.
+        .doutb(doutb[URAM_i]),                   // READ_DATA_WIDTH_B-bit output: Data output for port B read operations.
         .sbiterrb(),             // 1-bit output: Status signal to indicate single bit error occurrence
                                         // on the data output of port B.
 
@@ -278,7 +278,7 @@ begin:URAM_generate
         .dbiterrb(),             // 1-bit output: Status signal to indicate double bit error occurrence
                                         // on the data output of port B.
 
-        .doutb(doutb),                   // READ_DATA_WIDTH_B-bit output: Data output for port B read operations.
+        .doutb(doutb[URAM_i]),                   // READ_DATA_WIDTH_B-bit output: Data output for port B read operations.
         .sbiterrb(),             // 1-bit output: Status signal to indicate single bit error occurrence
                                         // on the data output of port B.
 
@@ -320,11 +320,36 @@ begin:URAM_generate
                                         // writing one byte of dina to address addra. For example, to
                                         // synchronously write only bits [15-8] of dina when WRITE_DATA_WIDTH_A
                                         // is 32, wea would be 4'b0010.
-
     );
     end
 end
 endgenerate
+wire [3:0] counter;
+always@(posedge clk) begin
+    if(!rst) counter <= 0;
+    else if (counter == 12) begin
+        counter <= 0;
+    end
+    else begin
+        counter <= counter + 1;
+    end
+end
+
+always@(posedge clk) begin
+    if(!rst) begin
+        addra <= 0;
+        addrb <= 0;
+    end
+    if(counter == 10) begin
+        addra <= 6'b100000;
+        addrb <= 6'b100000;
+    end
+    else if (counter == 12) begin
+        addra <= 0;
+        addrb <= 0;
+    end
+end
+
 
 always@(posedge clk) begin
     case (mod)
