@@ -1,19 +1,23 @@
 module vector_U(
-    input [Size-1:0] data_in,
-    input clk,
-    input [1:0] mod,
-    input en_read,
-    input rst,
-    input [5:0] addr,
-    output reg [Size-1:0] out
+    input [Size-1:0]        data_in,
+    input                   clk,
+    input [1:0]             mod,
+    input                   en_read,
+    input                   rst,
+    input [5:0]             host_write_addr,
+    input [5:0]             host_read_addr,
+    output [Size-1:0]   out_number
 );
 // addr 0 is empty, please not insert data into this address
 parameter Size = 256;
 
-parameter IDLE = 3'b000, READ_A = 3'b001,READ_B = 3'b010,WAIT = 3'b011,DATA_A = 3'b100,DATA_B = 3'b101;
-reg [2:0] state,next_state;
-reg [5:0] addrb;
+parameter IDLE = 4'b0000, READ_A = 4'b0001,READ_B = 4'b0010,WAIT = 4'b0011,DATA_A = 4'b0100,DATA_B = 4'b0101,FINISH = 4'b0110,WAIT_WRITE = 4'b0111,WRITE_BACK = 4'b1000;
+
+reg [3:0]       state,next_state;
+reg [5:0]       addrb;
 wire [Size-1:0] data;
+
+assign out_number = data;
 
 always @(posedge clk or negedge rst)
 begin
@@ -35,13 +39,17 @@ begin
             READ_B: next_state <= WAIT;
             WAIT: next_state <= DATA_A;
             DATA_A: next_state <= DATA_B;
-            DATA_B: next_state <= IDLE;
+            DATA_B: next_state <= FINISH;
+            FINISH: next_state <= WAIT_WRITE;
+            WAIT_WRITE: next_state <= IDLE;    
+            // WRITE_BACK: next_state <= IDLE;
             default: next_state <= IDLE;    
         endcase
     end
 end
 
 reg [Size-1:0] data_A,data_B;
+
 always @(posedge clk or negedge rst)
 begin
     if(!rst) begin
@@ -61,15 +69,47 @@ always @(posedge clk or negedge rst)
 begin
     if(!rst) begin
         addrb <= 0;
+        finish <= 0;
     end
     case(next_state)
-        IDLE: addrb <= addrb;
-        READ_A: addrb <= addrb + 1;
-        READ_B: addrb <= addrb + 1;
+        IDLE: begin
+            addrb <= addrb;
+            addr_read <= host_read_addr;
+            finish <= 1'b0;
+        end
+        READ_A: begin 
+            addr_read <= addrb + 1;
+            addrb <= addrb + 1;
+        end
+        READ_B: begin
+            addr_read <= addrb + 1;
+            addrb <= addrb + 1;
+        end
+        FINISH: begin
+            finish <= 1'b1;
+            addr_read <= host_read_addr;
+        end
+        WAIT_WRITE: finish <= 1'b0;
     endcase
 end
 
+reg [5:0]       addr_write;
+reg [5:0]       addr_read;
+reg [Size-1:0]  data_input;
+reg             finish;
+reg [Size-1:0]  out;
 
+always @(posedge clk)
+begin
+    if (finish) begin
+        addr_write <= 6'b100000 + host_write_addr;
+        data_input <= out;
+    end
+    else begin
+        addr_write <= host_write_addr;
+        data_input <= data_in;
+    end
+end
 
 //URAM instance
 xpm_memory_sdpram #(
@@ -108,8 +148,8 @@ xpm_memory_sdpram #(
       .sbiterrb(),             // 1-bit output: Status signal to indicate single bit error occurrence
                                        // on the data output of port B.
 
-      .addra(addr),                   // ADDR_WIDTH_A-bit input: Address for port A write operations.
-      .addrb(addrb),                   // ADDR_WIDTH_B-bit input: Address for port B read operations.
+      .addra(addr_write),                   // ADDR_WIDTH_A-bit input: Address for port A write operations.
+      .addrb(addr_read),                   // ADDR_WIDTH_B-bit input: Address for port B read operations.
       .clka(clk),                     // 1-bit input: Clock signal for port A. Also clocks port B when
                                        // parameter CLOCKING_MODE is "common_clock".
 
@@ -117,7 +157,7 @@ xpm_memory_sdpram #(
                                        // "independent_clock". Unused when parameter CLOCKING_MODE is
                                        // "common_clock".
 
-      .dina(data_in),                     // WRITE_DATA_WIDTH_A-bit input: Data input for port A write operations.
+      .dina(data_input),                     // WRITE_DATA_WIDTH_A-bit input: Data input for port A write operations.
       .ena(1'b1),                       // 1-bit input: Memory enable signal for port A. Must be high on clock
                                        // cycles when write operations are initiated. Pipelined internally.
 
@@ -148,7 +188,6 @@ xpm_memory_sdpram #(
                                        // is 32, wea would be 4'b0010.
 
    );
-
 
 //statement of data, output of URAM
 
