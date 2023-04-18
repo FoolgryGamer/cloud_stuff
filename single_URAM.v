@@ -102,7 +102,7 @@ reg [Size-1:0]  out;
 always @(posedge clk)
 begin
     if (finish) begin
-        addr_write <= 6'b100000 + host_write_addr;
+        addr_write <= 6'b100000 + addrb;
         data_input <= out;
     end
     else begin
